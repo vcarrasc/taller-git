@@ -15,9 +15,13 @@ if __name__ == "__main__":
         print("Error: El archivo especificado no existe o no es un archivo válido.")
         exit(1)
 
-    df = leer_csv(archivo)
-    if df is None:
-        print("Error: No se pudo leer el archivo CSV o el archivo está vacío o corrupto.")
+    try:
+        df = leer_csv(archivo)
+        if df is None:
+            print("Error: No se pudo leer el archivo CSV o el archivo está vacío o corrupto.")
+            exit(1)
+    except Exception as e:
+        print(f"Error al leer el archivo CSV: {e}")
         exit(1)
     df_numericas = estadisticas(df)
 

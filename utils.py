@@ -17,10 +17,11 @@ def leer_csv(ruta_csv):
         return df
     except FileNotFoundError:
         print(f"Error: No se encontró el archivo {ruta_csv}")
+        raise
     except Exception as e:
         print(f"Ocurrió un error durante la lectura del archivo: {e}")
+        raise
 
-    return
 
 
 def sanitize(name: str) -> str:
