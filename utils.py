@@ -20,6 +20,8 @@ def leer_csv(ruta_csv):
     except Exception as e:
         print(f"Ocurrió un error durante la lectura del archivo: {e}")
 
+    return
+
 
 def sanitize(name: str) -> str:
     """Convierte un nombre de columna en un nombre de archivo seguro."""

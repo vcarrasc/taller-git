@@ -16,6 +16,9 @@ if __name__ == "__main__":
         exit(1)
 
     df = leer_csv(archivo)
+    if df is None:
+        print("Error: No se pudo leer el archivo CSV o el archivo está vacío/corrupto.")
+        exit(1)
     df_numericas = estadisticas(df)
 
     # 2) Usar el DataFrame ya generado (se pasa entre funciones; no se relee)
