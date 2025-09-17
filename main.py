@@ -1,10 +1,12 @@
 import os
+
 from estadisticas import estadisticas
 from utils import select_numeric, leer_csv
 from plots import (
     plot_histograms,
     plot_boxplots,
     plot_scatter_matrix,)
+
 
 if __name__ == "__main__":
     archivo = input("Introduce la ruta del archivo CSV: ")
@@ -25,3 +27,4 @@ if __name__ == "__main__":
     plot_scatter_matrix(df_num, ".", show=True)
 
     print(f"✅ Gráficas guardadas en el actual directorio.")
+

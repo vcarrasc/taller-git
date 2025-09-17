@@ -12,5 +12,3 @@ def estadisticas(df: pd.DataFrame):
     print(df_numericas.describe().transpose())
 
     return df_numericas
-
-
