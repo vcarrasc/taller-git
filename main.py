@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     df = leer_csv(archivo)
     if df is None:
-        print("Error: No se pudo leer el archivo CSV o el archivo está vacío/corrupto.")
+        print("Error: No se pudo leer el archivo CSV o el archivo está vacío o corrupto.")
         exit(1)
     df_numericas = estadisticas(df)
 
@@ -25,9 +25,10 @@ if __name__ == "__main__":
     df_num = select_numeric(df, df_numericas.columns.tolist())
 
     # 3) Generar gráficas
-    plot_histograms(df_num, ".", bins=30, show=True)
-    plot_boxplots(df_num, ".", show=True)
-    plot_scatter_matrix(df_num, ".", show=True)
+    directorio = "."
+    plot_histograms(df_num, directorio, bins=30, show=True)
+    plot_boxplots(df_num, directorio, show=True)
+    plot_scatter_matrix(df_num, directorio, show=True)
 
     print(f"✅ Gráficas guardadas en el actual directorio.")
 
