@@ -9,5 +9,7 @@ def estadisticas(df: pd.DataFrame):
 
     print("\nEstadísticas básicas de las columnas numéricas:\n")
     print(df_numericas.describe().transpose())
+    print("\nEstadísticas de valores faltantes:\n")
+    print(df.isna().sum())
 
     return df_numericas

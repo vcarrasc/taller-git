@@ -5,8 +5,8 @@ from utils import select_numeric, leer_csv
 from plots import (
     plot_histograms,
     plot_boxplots,
-    plot_scatter_matrix,)
-
+    plot_scatter_matrix)
+from preprocesar import preprocesar_df
 
 if __name__ == "__main__":
     archivo = input("Introduce la ruta del archivo CSV: ")
@@ -36,3 +36,10 @@ if __name__ == "__main__":
 
     print(f"✅ Gráficas guardadas en el directorio actual.")
 
+    # 3) Preprocesar
+    print(f"✅ Datos preprocesados.")
+
+    df_clean, reporte = preprocesar_df(df)
+    df_clean.to_csv(directorio+"/output.csv", index=False)
+
+    estadisticas(df_clean)
