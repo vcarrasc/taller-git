@@ -30,9 +30,9 @@ if __name__ == "__main__":
 
     # 3) Generar gráficas
     directorio = "."
-    plot_histograms(df_num, directorio, bins=30, show=True)
-    plot_boxplots(df_num, directorio, show=True)
-    plot_scatter_matrix(df_num, directorio, show=True)
+    plot_histograms(df_num, directorio, bins=30)
+    plot_boxplots(df_num, directorio )
+    plot_scatter_matrix(df_num, directorio)
 
     print(f"✅ Gráficas guardadas en el actual directorio.")
 
