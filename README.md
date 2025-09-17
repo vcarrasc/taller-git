@@ -1,4 +1,4 @@
-# Features
+# Operaciones disponibles
 
 Esta implementación permite la lectura de un archivo CSV con una o varias columnas numéricas.
 
