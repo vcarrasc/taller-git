@@ -5,8 +5,7 @@ def estadisticas(df: pd.DataFrame):
     df_numericas = df.select_dtypes(include=['number'])
 
     if df_numericas.empty:
-        print("\nNo se encontraron columnas numéricas en el archivo.")
-        exit(1)
+        raise ValueError('No numeric columns found in the dataset')
 
     print("\nEstadísticas básicas de las columnas numéricas:\n")
     print(df_numericas.describe().transpose())
