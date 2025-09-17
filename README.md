@@ -12,3 +12,9 @@ Las operaciones disponibles son:
 
 ## Preprocesamiento
 - Permite el procesamiento de datos
+
+# Ejecutar Programa
+
+```
+python3 main.py
+```
