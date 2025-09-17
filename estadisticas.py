@@ -21,6 +21,6 @@ def analizar_csv(ruta_csv):
     except FileNotFoundError:
         print(f"Error: No se encontró el archivo {ruta_csv}")
     except Exception as e:
-        print(f"Ocurrió un error: {e}")
+        print(f"Ocurrió un error durante la lectura del archivo: {e}")
 
 
